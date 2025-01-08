@@ -21,5 +21,11 @@ namespace BKK_20241219
         {
             Close();
         }
+
+        private void vásárlástToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmvasarlas ujvasarlas = new frmvasarlas();
+            ujvasarlas.ShowDialog();
+        }
     }
 }

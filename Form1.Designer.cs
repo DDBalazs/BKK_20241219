@@ -30,9 +30,9 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.buszjegyÉsBérletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kilépésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vásárlástToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statisztikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kilépésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,24 +56,25 @@
             this.buszjegyÉsBérletToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
             this.buszjegyÉsBérletToolStripMenuItem.Text = "Buszjegy és bérlet";
             // 
-            // kilépésToolStripMenuItem
-            // 
-            this.kilépésToolStripMenuItem.Name = "kilépésToolStripMenuItem";
-            this.kilépésToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.kilépésToolStripMenuItem.Text = "Kilépés";
-            this.kilépésToolStripMenuItem.Click += new System.EventHandler(this.kilépésToolStripMenuItem_Click);
-            // 
             // vásárlástToolStripMenuItem
             // 
             this.vásárlástToolStripMenuItem.Name = "vásárlástToolStripMenuItem";
             this.vásárlástToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.vásárlástToolStripMenuItem.Text = "Vásárlás";
+            this.vásárlástToolStripMenuItem.Click += new System.EventHandler(this.vásárlástToolStripMenuItem_Click);
             // 
             // statisztikaToolStripMenuItem
             // 
             this.statisztikaToolStripMenuItem.Name = "statisztikaToolStripMenuItem";
             this.statisztikaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.statisztikaToolStripMenuItem.Text = "Statisztika";
+            // 
+            // kilépésToolStripMenuItem
+            // 
+            this.kilépésToolStripMenuItem.Name = "kilépésToolStripMenuItem";
+            this.kilépésToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.kilépésToolStripMenuItem.Text = "Kilépés";
+            this.kilépésToolStripMenuItem.Click += new System.EventHandler(this.kilépésToolStripMenuItem_Click);
             // 
             // frmfo
             // 

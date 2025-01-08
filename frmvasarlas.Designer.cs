@@ -38,10 +38,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbfizetendo = new System.Windows.Forms.Label();
-            this.lbvonossz = new System.Windows.Forms.Label();
-            this.lbteljossz = new System.Windows.Forms.Label();
             this.lbdiakossz = new System.Windows.Forms.Label();
+            this.lbteljossz = new System.Windows.Forms.Label();
+            this.lbvonossz = new System.Windows.Forms.Label();
+            this.lbfizetendo = new System.Windows.Forms.Label();
             this.btfizetes = new System.Windows.Forms.Button();
             this.btelvet = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -80,6 +80,7 @@
             this.txvondb.Name = "txvondb";
             this.txvondb.Size = new System.Drawing.Size(100, 20);
             this.txvondb.TabIndex = 3;
+            this.txvondb.TextChanged += new System.EventHandler(this.txvondb_TextChanged);
             // 
             // txvonteljdb
             // 
@@ -87,6 +88,7 @@
             this.txvonteljdb.Name = "txvonteljdb";
             this.txvonteljdb.Size = new System.Drawing.Size(100, 20);
             this.txvonteljdb.TabIndex = 4;
+            this.txvonteljdb.TextChanged += new System.EventHandler(this.txvonteljdb_TextChanged);
             // 
             // txdiakdb
             // 
@@ -94,6 +96,7 @@
             this.txdiakdb.Name = "txdiakdb";
             this.txdiakdb.Size = new System.Drawing.Size(100, 20);
             this.txdiakdb.TabIndex = 5;
+            this.txdiakdb.TextChanged += new System.EventHandler(this.txdiakdb_TextChanged);
             // 
             // label4
             // 
@@ -133,6 +136,36 @@
             this.panel1.Size = new System.Drawing.Size(237, 153);
             this.panel1.TabIndex = 9;
             // 
+            // lbdiakossz
+            // 
+            this.lbdiakossz.AutoSize = true;
+            this.lbdiakossz.Location = new System.Drawing.Point(15, 127);
+            this.lbdiakossz.Name = "lbdiakossz";
+            this.lbdiakossz.Size = new System.Drawing.Size(48, 13);
+            this.lbdiakossz.TabIndex = 13;
+            this.lbdiakossz.Text = "label10";
+            this.lbdiakossz.Visible = false;
+            // 
+            // lbteljossz
+            // 
+            this.lbteljossz.AutoSize = true;
+            this.lbteljossz.Location = new System.Drawing.Point(15, 92);
+            this.lbteljossz.Name = "lbteljossz";
+            this.lbteljossz.Size = new System.Drawing.Size(41, 13);
+            this.lbteljossz.TabIndex = 12;
+            this.lbteljossz.Text = "label9";
+            this.lbteljossz.Visible = false;
+            // 
+            // lbvonossz
+            // 
+            this.lbvonossz.AutoSize = true;
+            this.lbvonossz.Location = new System.Drawing.Point(15, 58);
+            this.lbvonossz.Name = "lbvonossz";
+            this.lbvonossz.Size = new System.Drawing.Size(41, 13);
+            this.lbvonossz.TabIndex = 11;
+            this.lbvonossz.Text = "label8";
+            this.lbvonossz.Visible = false;
+            // 
             // lbfizetendo
             // 
             this.lbfizetendo.AutoSize = true;
@@ -143,33 +176,7 @@
             this.lbfizetendo.Size = new System.Drawing.Size(52, 17);
             this.lbfizetendo.TabIndex = 10;
             this.lbfizetendo.Text = "label7";
-            // 
-            // lbvonossz
-            // 
-            this.lbvonossz.AutoSize = true;
-            this.lbvonossz.Location = new System.Drawing.Point(15, 58);
-            this.lbvonossz.Name = "lbvonossz";
-            this.lbvonossz.Size = new System.Drawing.Size(41, 13);
-            this.lbvonossz.TabIndex = 11;
-            this.lbvonossz.Text = "label8";
-            // 
-            // lbteljossz
-            // 
-            this.lbteljossz.AutoSize = true;
-            this.lbteljossz.Location = new System.Drawing.Point(15, 92);
-            this.lbteljossz.Name = "lbteljossz";
-            this.lbteljossz.Size = new System.Drawing.Size(41, 13);
-            this.lbteljossz.TabIndex = 12;
-            this.lbteljossz.Text = "label9";
-            // 
-            // lbdiakossz
-            // 
-            this.lbdiakossz.AutoSize = true;
-            this.lbdiakossz.Location = new System.Drawing.Point(15, 127);
-            this.lbdiakossz.Name = "lbdiakossz";
-            this.lbdiakossz.Size = new System.Drawing.Size(48, 13);
-            this.lbdiakossz.TabIndex = 13;
-            this.lbdiakossz.Text = "label10";
+            this.lbfizetendo.Visible = false;
             // 
             // btfizetes
             // 
@@ -192,6 +199,7 @@
             this.btelvet.TabIndex = 11;
             this.btelvet.Text = "Elvet";
             this.btelvet.UseVisualStyleBackColor = true;
+            this.btelvet.Click += new System.EventHandler(this.btelvet_Click);
             // 
             // frmvasarlas
             // 
@@ -215,6 +223,7 @@
             this.Name = "frmvasarlas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Jegy és bérlet vásárlás";
+            this.Load += new System.EventHandler(this.frmvasarlas_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
