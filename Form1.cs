@@ -27,5 +27,11 @@ namespace BKK_20241219
             frmvasarlas ujvasarlas = new frmvasarlas();
             ujvasarlas.ShowDialog();
         }
+
+        private void statisztikaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmstatisztika stat = new frmstatisztika();
+            stat.ShowDialog();
+        }
     }
 }

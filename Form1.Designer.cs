@@ -68,6 +68,7 @@
             this.statisztikaToolStripMenuItem.Name = "statisztikaToolStripMenuItem";
             this.statisztikaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.statisztikaToolStripMenuItem.Text = "Statisztika";
+            this.statisztikaToolStripMenuItem.Click += new System.EventHandler(this.statisztikaToolStripMenuItem_Click);
             // 
             // kilépésToolStripMenuItem
             // 

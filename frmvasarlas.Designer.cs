@@ -188,6 +188,7 @@
             this.btfizetes.TabIndex = 10;
             this.btfizetes.Text = "Fizetés";
             this.btfizetes.UseVisualStyleBackColor = true;
+            this.btfizetes.Click += new System.EventHandler(this.btfizetes_Click);
             // 
             // btelvet
             // 

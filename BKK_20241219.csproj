@@ -52,16 +52,26 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmstatisztika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmstatisztika.Designer.cs">
+      <DependentUpon>frmstatisztika.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmvasarlas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmvasarlas.Designer.cs">
       <DependentUpon>frmvasarlas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Jegyek.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmstatisztika.resx">
+      <DependentUpon>frmstatisztika.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmvasarlas.resx">
       <DependentUpon>frmvasarlas.cs</DependentUpon>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,15 +33,30 @@ namespace BKK_20241219
                 vondb = Convert.ToInt32(txvondb.Text);
                 vonosszeg = vondb*450;
             }
+            else
+            {
+                vondb = 0;
+                vonosszeg= 0;
+            }
             if(txvonteljdb.TextLength > 0)
             {
                 tdb = Convert.ToInt32(txvonteljdb.Text);
                 tosszeg = tdb * 9500;
             }
+            else
+            {
+                tdb = 0;
+                tosszeg = 0;
+            }
             if(txdiakdb.TextLength > 0)
             {
                 ddb = Convert.ToInt32(txdiakdb.Text);
                 dosszeg = ddb * 3450;
+            }
+            else
+            {
+                ddb = 0;
+                dosszeg = 0;
             }
             fizentendo= vonosszeg + tosszeg + dosszeg;
             lbvonossz.Text = "Vonaljegy összege: " + vonosszeg.ToString() + " Ft";
@@ -122,7 +138,35 @@ namespace BKK_20241219
                     txdiakdb.Focus();
                 }
             }
-                szamolas();
+            szamolas();
+        }
+
+        private void btfizetes_Click(object sender, EventArgs e)
+        {
+            if (File.Exists("..\\..\\src\\jegyadatok.txt"))
+            {
+                FileStream fs = new FileStream("..\\..\\src\\jegyadatok.txt", FileMode.Append);
+                StreamWriter sw = new StreamWriter(fs);
+                sw.Write("\n" + vondb.ToString() + ";" + vonosszeg.ToString() + ";" + tdb.ToString() + ";" + tosszeg.ToString() + ";" + ddb.ToString() + ";" + dosszeg.ToString());
+
+                sw.Close();
+                fs.Close();
+            }
+            else
+            {
+                FileStream fs = new FileStream("..\\..\\src\\jegyadatok.txt", FileMode.Create);
+                StreamWriter sw = new StreamWriter(fs);
+                sw.Write(vondb.ToString() + ";" + vonosszeg.ToString() + ";" + tdb.ToString() + ";" + tosszeg.ToString() + ";" + ddb.ToString() + ";" + dosszeg.ToString());
+
+                sw.Close();
+                fs.Close();
+            }
+            txdiakdb.Clear();
+            txvondb.Clear();
+            txvonteljdb.Clear();
+            szamolas();
+            MessageBox.Show("Sikeres fizetés!", "Üzenet", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }
